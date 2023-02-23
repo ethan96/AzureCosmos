@@ -57,7 +57,7 @@ Console.WriteLine($"New container:\t{container.Id}");
 #endregion
 
 #region Read item as stream (ReadItemStreamAsync) 可先檢查狀態，避免掉找不到直接報錯
-ResponseMessage responseMessage = await container.ReadItemStreamAsync(id: "1", partitionKey: new PartitionKey("Audi"));
+ResponseMessage responseMessage = await container.ReadItemStreamAsync(id: "5", partitionKey: new PartitionKey("Audi"));
 if (responseMessage.StatusCode == System.Net.HttpStatusCode.NotFound)
 {
     Console.WriteLine("Not found readItem");
